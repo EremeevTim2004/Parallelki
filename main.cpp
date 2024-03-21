@@ -32,55 +32,71 @@ int main() {
         case 2: {
             lab2_start();
             break;
-        }
+        }/* in dev
         case 3: {
+            lab3_start();
             break;
         }
         case 4: {
+            lab4_start();
             break;
         }
         case 5: {
+            lab5_start();
             break;
         }
         case 6: {
+            lab6_start();
             break;
         }
         case 7: {
+            lab7_start();
             break;
         }
         case 8: {
+            lab8_start();
             break;
         }
         case 9: {
+            lab9_start();
             break;
         }
         case 10: {
+            lab10_start();
             break;
         }
         case 11: {
+            lab11_start();
             break;
         }
         case 12: {
+            lab12_start();
             break;
         }
         case 13: {
+            lab13_start();
             break;
         }
         case 14: {
+            lab14_start();
             break;
         }
         case 15: {
+            lab15_start();
             break;
         }
         case 16: {
+            lab16_start();
             break;
         }
         case 17: {
+            lab17_start();
             break;
         }
         case 18: {
+            lab18_start();
             break;
-        }
+        }*/
         default: {
             break;
         }
