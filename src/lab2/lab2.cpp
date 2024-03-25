@@ -4,7 +4,7 @@
 
 void integral (const double a1, const double b1, const double a2, const double b2, const double h1, const double h2, double* res) {
     int i, j;
-    int n1 = (int)((b1 - a1) / h1); 
+    int n1 = (int)((b1 - a1) / h1);
     int n2 = (int)((b2 - a2) / h2);
     double sum1 = 0.0;
     double sum2 = 0.0;
