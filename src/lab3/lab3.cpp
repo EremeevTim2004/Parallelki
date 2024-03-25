@@ -2,6 +2,32 @@
 
 #include "lab3.hpp"
 
+double rand_rang(double a, double b) {
+    if (a > b) return range_rang(b, a);
+    else return a + (b - a) * rand() / RAND_MAX;
+}
+
+void integral(const double a1, const double b1, const double a2, const double b2, const double h1, const double h2, double* res) {
+    int i = 0;
+    int j = 0;
+
+    int n1 = (int)((b1 - a1) / h1);
+    int n2 = (int)((b2 - a2) / h2);
+
+    double sum = 0.0;
+
+    double x;
+    double y;
+
+#pragma parallel for reduction(+: sum)
+    for (i = 1; i <= n1; i ++) {
+        x = rand_rang(a1, b1);
+        y = rand_rang(a2, b2);
+        sum += ((pow(e, sin(PI * x) * cos(PI * y)) + 1) / ((b1 - a1) * (b2 - a2)));
+    }
+    *res = (b1 - a1) * (b2 - a2) * sum / n;
+}
+
 void lab3_start() {
     double time;
     double min_time;
