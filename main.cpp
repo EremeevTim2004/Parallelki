@@ -2,8 +2,8 @@
 
 #include "src/lab1/lab1.hpp"
 #include "src/lab2/lab2.hpp"
-/* in dev
 #include "src/lab3/lab3.hpp"
+/* in dev
 #include "src/lab4/lab4.hpp"
 #include "src/lab5/lab5.hpp"
 #include "src/lab6/lab6.hpp"
