@@ -1,9 +1,4 @@
-#include <iostream>
-#include <chrono>
-#include <cmath>
-#include <mpi.h>
-
-#define M_PI 3.14159265358979323846
+#include "includes.h"
 
 // Константы для интегрирования
 const double a1 = 0.0, b1 = 16.0;

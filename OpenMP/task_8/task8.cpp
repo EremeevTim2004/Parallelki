@@ -1,7 +1,4 @@
-#include <iostream>
-#include <vector>
-#include <omp.h>
-#include <cmath>
+#include "includes.h"
 
 void bit_reversal(std::vector<int> &data)
 {

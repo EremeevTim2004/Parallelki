@@ -1,13 +1,4 @@
-#include <iostream>
-#include <vector>
-#include <complex>
-#include <cmath>
-#include <chrono>
-#include <omp.h>
-
-#define M_PI 3.14159265358979323846
-
-using namespace std;
+#include "includes.h"
 
 // Последовательное БПФ
 void fft_recursive(vector<complex<double>> &x)

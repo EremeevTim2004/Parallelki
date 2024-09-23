@@ -1,8 +1,4 @@
-#include <iostream>
-#include <iomanip>
-#include <vector>
-#include <cmath>
-#include <mpi.h>
+#include "includes.h"
 
 // Функция для бит-реверсирования
 unsigned int bit_reverse(unsigned int num, int bits)

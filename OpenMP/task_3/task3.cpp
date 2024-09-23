@@ -1,10 +1,4 @@
-#include <omp.h>
-#include <iostream>
-#include <cmath>
-#include <chrono>
-#include <random>
-
-#define M_PI 3.14159265358979323846
+#include "includes.h"
 
 double f(double x, double y)
 {

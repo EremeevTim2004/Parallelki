@@ -1,7 +1,4 @@
-#include <omp.h>
-#include <iostream>
-#include <cmath>
-#include <chrono>
+#include "includes.h"
 
 double f(double x)
 {

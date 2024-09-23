@@ -1,9 +1,4 @@
-#include <iostream>
-#include <iomanip>
-#include <vector>
-#include <complex>
-#include <cmath>
-#include <mpi.h>
+#include "includes.h"
 
 const int N = 1024; // Число отсчетов
 const double PI = 3.14159265358979323846;

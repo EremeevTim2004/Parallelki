@@ -1,10 +1,4 @@
-#include <iostream>
-#include <vector>
-#include <cmath>
-#include <complex>
-#include <fftw3.h>
-
-#define M_PI 3.14159265358979323846
+#include "includes.h"
 
 const int N = 128;           // Number of samples
 const double fs = N;         // Sampling frequency (Hz)

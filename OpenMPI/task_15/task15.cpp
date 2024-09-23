@@ -1,9 +1,4 @@
-#include <mpi.h>
-#include <iostream>
-#include <vector>
-#include <cmath>
-#include <chrono>
-#include <iomanip>
+#include "includes.h"
 
 const int MAX_ITER = 10000;
 const double TOL = 1e-6;

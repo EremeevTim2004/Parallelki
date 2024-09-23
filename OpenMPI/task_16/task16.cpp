@@ -1,10 +1,4 @@
-#include <iostream>
-#include <iomanip>
-#include <vector>
-#include <cmath>
-#include <complex>
-#include <mpi.h>
-#include <ctime>
+#include "includes.h"
 
 const int MAX_SIZE = 1048576; // Максимальный размер сигнала
 const int TESTS = 5;          // Количество тестов

@@ -1,6 +1,4 @@
-#include <iostream>
-#include <cmath>
-#include <mpi.h>
+#include "includes.h"
 
 const double infinity = 1e6; // Замена для бесконечности
 const int N = 1000000;       // Количество отрезков разбиения

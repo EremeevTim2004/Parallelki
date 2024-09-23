@@ -1,7 +1,4 @@
-#include <iostream>
-#include <vector>
-#include <cmath>
-#include <omp.h>
+#include "includes.h"
 
 const double TOL = 1e-6;   // Заданная точность
 const int MAX_ITER = 1000; // Максимальное количество итераций

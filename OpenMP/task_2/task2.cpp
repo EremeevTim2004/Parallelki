@@ -1,9 +1,4 @@
-#include <omp.h>
-#include <iostream>
-#include <cmath>
-#include <chrono>
-
-#define M_PI 3.14159265358979323846
+#include "includes.h"
 
 double f(double x, double y, double a1, double b1, double a2, double b2)
 {
