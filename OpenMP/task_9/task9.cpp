@@ -6,10 +6,14 @@
 
 #define M_PI 3.14159265358979323846
 
-const int N = 128;           // Number of samples
-const double fs = N;         // Sampling frequency (Hz)
-const double f = 10.0;       // Signal frequency (Hz)
-const double duration = 1.0; // Signal duration (s)
+const int N = 1024;     // Number of samples
+const double fs = 1024; // Sampling frequency (Hz)
+const double T = 1.0;   // Period (s)
+
+double signal_function(double t)
+{
+    return M_PI / 2 - (M_PI * t / T);
+}
 
 int main()
 {
@@ -19,7 +23,7 @@ int main()
     for (int n = 0; n < N; ++n)
     {
         double t = n / fs;
-        signal[n] = sin(2 * M_PI * f * t);
+        signal[n] = signal_function(t);
     }
 
     // Расчет БПФ
@@ -28,17 +32,19 @@ int main()
     fftw_execute(plan);
     fftw_destroy_plan(plan);
 
-    // Нормализация амплитудного спектра
-    std::vector<double> amplitude_spectrum(N / 2);
+    // Расчет коэффициентов ряда Фурье
+    std::vector<double> fourier_coefficients(N / 2);
     for (int k = 0; k < N / 2; ++k)
     {
-        amplitude_spectrum[k] = std::abs(fft_result[k]) / N;
+        fourier_coefficients[k] = std::abs(fft_result[k]) / N;
     }
 
-    // Вывод амплитудного спектра
-    for (int k = 0; k < N / 2; ++k)
-    {
-        std::cout << "Frequency: " << k * (fs / N) << " Hz, Amplitude: " << amplitude_spectrum[k] << std::endl;
+    // Сравнение с аналитическим разложением
+    std::cout << "Сравнение с аналитическим разложением:\n";
+    for (int k = 1; k <= 10; ++k)
+    {                                      // Первые 10 коэффициентов
+        double analytical_value = 1.0 / k; // Аналитическое значение
+        std::cout << "k: " << k << ", Коэффициент ряда Фурье: " << fourier_coefficients[k - 1] << ", Аналитическое: " << analytical_value << std::endl;
     }
 
     return 0;
